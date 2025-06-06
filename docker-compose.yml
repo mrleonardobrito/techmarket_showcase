@@ -10,10 +10,10 @@ services:
       POSTGRES_PASSWORD: techmarket_password
       POSTGRES_DB: techmarket_db
     volumes:
-      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./config/postgres:/docker-entrypoint-initdb.d
       - postgres_data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5436:5432"
     restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U techmarket_user -d techmarket_db"]
@@ -29,7 +29,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root_password
     volumes:
-      - ./mongodb/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./config/mongo:/docker-entrypoint-initdb.d
       - mongo_data:/data/db
     ports:
       - "27017:27017"
@@ -45,7 +45,7 @@ services:
     container_name: techmarket-cassandra
     hostname: cassandra
     volumes:
-      - ./cassandra/init.cql:/docker-entrypoint-initdb.d/init.cql
+      - ./config/cassandra:/docker-entrypoint-initdb.d
       - cassandra_data:/var/lib/cassandra
     environment:
       - CASSANDRA_HEAP_MAX=2G
