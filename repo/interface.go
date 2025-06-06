@@ -6,7 +6,7 @@ import (
 )
 
 type QueryRepository interface {
-	GetClientByEmail(email string) (model.Client, error)
+	GetClientWithLastOrdersByEmail(email string) (model.Client, error)
 	GetProductByCategory(category string) ([]model.Product, error)
 	GetDeliveredProductsByClient(clientID uint) ([]model.Product, error)
 	Get5MostSoldProducts() ([]model.Product, error)
