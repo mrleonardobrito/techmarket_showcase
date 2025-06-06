@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: techmarket-postgres
+    hostname: postgres-db
+    environment:
+      POSTGRES_USER: techmarket_user
+      POSTGRES_PASSWORD: techmarket_password
+      POSTGRES_DB: techmarket_db
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U techmarket_user -d techmarket_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mongodb:
+    image: mongo:6.0
+    container_name: techmarket-mongo
+    hostname: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root_password
+    volumes:
+      - ./mongodb/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  cassandra:
+    image: cassandra:4.1
+    container_name: techmarket-cassandra
+    hostname: cassandra
+    volumes:
+      - ./cassandra/init.cql:/docker-entrypoint-initdb.d/init.cql
+      - cassandra_data:/var/lib/cassandra
+    environment:
+      - CASSANDRA_HEAP_MAX=2G
+      - CASSANDRA_HEAP_INIT=2G
+
+    ports:
+      - "9042:9042"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "cqlsh -e 'describe keyspaces'"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+
+volumes:
+  postgres_data:
+  mongo_data:
+  cassandra_data:
