@@ -50,15 +50,26 @@ services:
     environment:
       - CASSANDRA_HEAP_MAX=2G
       - CASSANDRA_HEAP_INIT=2G
-
+      - CASSANDRA_KEYSPACE=techmarket
+      - CASSANDRA_INIT_CQL=/docker-entrypoint-initdb.d/init.cql
     ports:
       - "9042:9042"
     restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "cqlsh -e 'describe keyspaces'"]
-      interval: 30s
-      timeout: 10s
-      retries: 10
+        test: ["CMD", "cqlsh", "-u cassandra", "-p cassandra" ,"-e describe keyspaces"]
+        interval: 15s
+        timeout: 10s
+        retries: 10
+
+  cassandra-load-keyspace:
+      container_name: cassandra-load-keyspace
+      image: cassandra:4.1
+      depends_on:
+        cassandra:
+          condition: service_healthy
+      volumes:
+        - ./config/cassandra/init.cql:/init.cql
+      command: /bin/bash -c "echo loading cassandra keyspace && cqlsh cassandra -f /init.cql"
 
 volumes:
   postgres_data:

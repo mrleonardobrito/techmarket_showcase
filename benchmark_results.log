@@ -1,0 +1,249 @@
+
+=== Relatório de Performance ===
+
+Banco de Dados   Operação   Entidade   Tamanho   Duração   Registros/Segundo   
+--------------------------------------------------------------------------------
+PostgreSQL   INSERT   Cliente                          20000   359ms    55634.49      
+PostgreSQL   INSERT   Produto                          5000    52ms     97047.94      
+PostgreSQL   INSERT   Pedido                           10000   281ms    35578.92      
+PostgreSQL   INSERT   Pagamento                        10000   274ms    36542.46      
+MongoDB      INSERT   Cliente                          20000   137ms    145737.44     
+MongoDB      INSERT   Produto                          5000    67ms     74247.69      
+MongoDB      INSERT   Pedido                           10000   3.608s   2771.32       
+MongoDB      INSERT   Pagamento                        10000   62ms     162446.93     
+Cassandra    INSERT   Cliente                          20000   1.197s   16710.06      
+Cassandra    INSERT   Produto                          5000    200ms    25013.38      
+Cassandra    INSERT   Pedido                           10000   1.23s    8132.95       
+Cassandra    INSERT   Pagamento                        10000   322ms    31091.36      
+PostgreSQL   QUERY    Cliente por email                20000   3ms      6913614.05    
+MongoDB      QUERY    Cliente por email                20000   8ms      2462542.88    
+Cassandra    QUERY    Cliente por email                20000   6ms      3139296.55    
+PostgreSQL   QUERY    Produto por categoria            5000    1ms      4970351.85    
+MongoDB      QUERY    Produto por categoria            5000    3ms      1604585.26    
+Cassandra    QUERY    Produto por categoria            5000    6ms      797140.12     
+PostgreSQL   QUERY    Produtos entregues por cliente   20000   1ms      20010545.56   
+MongoDB      QUERY    Produtos entregues por cliente   20000   1ms      31685979.27   
+PostgreSQL   QUERY    5 produtos mais vendidos         5000    8ms      650707.76     
+MongoDB      QUERY    5 produtos mais vendidos         5000    7ms      676237.41     
+Cassandra    QUERY    5 produtos mais vendidos         5000    6ms      815590.57     
+
+=== Relatório de Performance ===
+
+Banco de Dados   Operação   Entidade   Tamanho   Duração   Registros/Segundo   
+--------------------------------------------------------------------------------
+PostgreSQL   QUERY   Cliente por email                20000   5ms    3699778.51    
+MongoDB      QUERY   Cliente por email                20000   11ms   1840566.11    
+Cassandra    QUERY   Cliente por email                20000   5ms    4276441.13    
+PostgreSQL   QUERY   Produto por categoria            5000    1ms    3873269.71    
+MongoDB      QUERY   Produto por categoria            5000    2ms    2359860.84    
+Cassandra    QUERY   Produto por categoria            5000    5ms    1110866.23    
+PostgreSQL   QUERY   Produtos entregues por cliente   20000   1ms    14226359.88   
+MongoDB      QUERY   Produtos entregues por cliente   20000   1ms    32320359.40   
+PostgreSQL   QUERY   5 produtos mais vendidos         5000    7ms    720034.78     
+MongoDB      QUERY   5 produtos mais vendidos         5000    9ms    575680.38     
+Cassandra    QUERY   5 produtos mais vendidos         5000    5ms    993094.42     
+
+=== Relatório de Performance ===
+
+Banco de Dados   Operação   Entidade   Tamanho   Duração   Registros/Segundo   
+--------------------------------------------------------------------------------
+PostgreSQL   QUERY   Cliente por email                20000   4ms    4630480.69    
+MongoDB      QUERY   Cliente por email                20000   10ms   1956445.03    
+Cassandra    QUERY   Cliente por email                20000   5ms    4377679.96    
+PostgreSQL   QUERY   Produto por categoria            5000    1ms    3853166.61    
+MongoDB      QUERY   Produto por categoria            5000    2ms    2258710.94    
+Cassandra    QUERY   Produto por categoria            5000    4ms    1133113.15    
+PostgreSQL   QUERY   Produtos entregues por cliente   20000   1ms    14228485.29   
+MongoDB      QUERY   Produtos entregues por cliente   20000   1ms    34187216.03   
+PostgreSQL   QUERY   5 produtos mais vendidos         5000    6ms    793853.67     
+MongoDB      QUERY   5 produtos mais vendidos         5000    7ms    724754.38     
+Cassandra    QUERY   5 produtos mais vendidos         5000    4ms    1355621.93    
+
+=== Relatório de Performance ===
+
+Banco de Dados   Operação   Entidade   Tamanho   Duração   Registros/Segundo   
+--------------------------------------------------------------------------------
+PostgreSQL   QUERY   Cliente por email                20000   5ms    4296279.14    
+MongoDB      QUERY   Cliente por email                20000   12ms   1718293.22    
+Cassandra    QUERY   Cliente por email                20000   5ms    4443420.48    
+PostgreSQL   QUERY   Produto por categoria            5000    1ms    3736415.33    
+MongoDB      QUERY   Produto por categoria            5000    2ms    2196539.31    
+Cassandra    QUERY   Produto por categoria            5000    4ms    1234907.88    
+PostgreSQL   QUERY   Produtos entregues por cliente   20000   1ms    13698526.93   
+MongoDB      QUERY   Produtos entregues por cliente   20000   1ms    28106309.30   
+PostgreSQL   QUERY   5 produtos mais vendidos         5000    7ms    736395.90     
+MongoDB      QUERY   5 produtos mais vendidos         5000    9ms    547141.31     
+Cassandra    QUERY   5 produtos mais vendidos         5000    5ms    1091378.98    
+
+=== Relatório de Performance ===
+
+Banco de Dados   Operação   Entidade   Tamanho   Duração   Registros/Segundo   
+--------------------------------------------------------------------------------
+PostgreSQL   INSERT   Cliente                          20000   403ms   49634.75      
+PostgreSQL   INSERT   Produto                          5000    74ms    67968.93      
+PostgreSQL   INSERT   Pedido                           10000   274ms   36499.03      
+MongoDB      INSERT   Cliente                          20000   153ms   130826.03     
+MongoDB      INSERT   Produto                          5000    70ms    71357.56      
+MongoDB      INSERT   Pedido                           10000   3.75s   2666.34       
+MongoDB      INSERT   Pagamento                        10000   77ms    129218.56     
+Cassandra    INSERT   Cliente                          20000   1.25s   16000.61      
+Cassandra    INSERT   Produto                          5000    211ms   23643.93      
+Cassandra    INSERT   Pagamento                        10000   380ms   26306.74      
+PostgreSQL   QUERY    Cliente por email                20000   3ms     6440560.07    
+MongoDB      QUERY    Cliente por email                20000   9ms     2133516.99    
+Cassandra    QUERY    Cliente por email                20000   7ms     2997615.85    
+PostgreSQL   QUERY    Produto por categoria            5000    2ms     3102685.87    
+MongoDB      QUERY    Produto por categoria            5000    3ms     1901038.77    
+Cassandra    QUERY    Produto por categoria            5000    7ms     716272.96     
+PostgreSQL   QUERY    Produtos entregues por cliente   20000   1ms     19245092.02   
+MongoDB      QUERY    Produtos entregues por cliente   20000   1ms     29382857.16   
+Cassandra    QUERY    Produtos entregues por cliente   20000   8ms     2471556.10    
+PostgreSQL   QUERY    5 produtos mais vendidos         5000    9ms     565374.92     
+MongoDB      QUERY    5 produtos mais vendidos         5000    9ms     530082.11     
+Cassandra    QUERY    5 produtos mais vendidos         5000    8ms     612600.51     
+
+=== Relatório de Performance ===
+
+Banco de Dados   Operação   Entidade   Tamanho   Duração   Registros/Segundo   
+--------------------------------------------------------------------------------
+PostgreSQL   INSERT   Produto                          5000    106ms    47155.59      
+PostgreSQL   INSERT   Pedido                           10000   288ms    34758.50      
+PostgreSQL   INSERT   Pagamento                        10000   269ms    37228.62      
+MongoDB      INSERT   Cliente                          20000   129ms    154958.24     
+MongoDB      INSERT   Produto                          5000    23ms     216463.76     
+MongoDB      INSERT   Pedido                           10000   3.619s   2763.11       
+MongoDB      INSERT   Pagamento                        10000   39ms     255407.21     
+Cassandra    INSERT   Cliente                          20000   759ms    26345.09      
+Cassandra    INSERT   Produto                          5000    159ms    31396.40      
+Cassandra    INSERT   Pagamento                        10000   285ms    35115.13      
+PostgreSQL   QUERY    Cliente por email                20000   3ms      7867446.12    
+MongoDB      QUERY    Cliente por email                20000   15ms     1320272.32    
+Cassandra    QUERY    Cliente por email                20000   5ms      4204547.89    
+PostgreSQL   QUERY    Produto por categoria            5000    1ms      4358677.30    
+MongoDB      QUERY    Produto por categoria            5000    4ms      1154908.85    
+Cassandra    QUERY    Produto por categoria            5000    4ms      1181122.54    
+PostgreSQL   QUERY    Produtos entregues por cliente   20000   1ms      15495719.69   
+MongoDB      QUERY    Produtos entregues por cliente   20000   1ms      29136637.72   
+Cassandra    QUERY    Produtos entregues por cliente   20000   4ms      4792415.33    
+PostgreSQL   QUERY    5 produtos mais vendidos         5000    11ms     461543.38     
+MongoDB      QUERY    5 produtos mais vendidos         5000    13ms     395052.08     
+Cassandra    QUERY    5 produtos mais vendidos         5000    5ms      1091168.91    
+
+=== Relatório de Performance ===
+
+Banco de Dados   Operação   Entidade   Tamanho   Duração   Registros/Segundo   
+--------------------------------------------------------------------------------
+PostgreSQL   INSERT   Cliente                          20000   461ms    43385.39      
+PostgreSQL   INSERT   Produto                          5000    61ms     81756.09      
+PostgreSQL   INSERT   Pedido                           10000   319ms    31307.74      
+PostgreSQL   INSERT   Pagamento                        10000   330ms    30259.67      
+MongoDB      INSERT   Cliente                          20000   147ms    136003.54     
+MongoDB      INSERT   Produto                          5000    54ms     92353.85      
+MongoDB      INSERT   Pedido                           10000   3.699s   2703.26       
+MongoDB      INSERT   Pagamento                        10000   67ms     149307.32     
+Cassandra    INSERT   Cliente                          20000   1.251s   15987.60      
+Cassandra    INSERT   Produto                          5000    223ms    22464.69      
+Cassandra    INSERT   Pagamento                        10000   362ms    27635.15      
+PostgreSQL   QUERY    Cliente por email                20000   3ms      7083745.81    
+MongoDB      QUERY    Cliente por email                20000   7ms      2774039.76    
+Cassandra    QUERY    Cliente por email                20000   7ms      2826943.83    
+PostgreSQL   QUERY    Produto por categoria            5000    1ms      4955912.21    
+MongoDB      QUERY    Produto por categoria            5000    2ms      2301732.24    
+Cassandra    QUERY    Produto por categoria            5000    6ms      804603.49     
+PostgreSQL   QUERY    Produtos entregues por cliente   20000   1ms      18308043.82   
+MongoDB      QUERY    Produtos entregues por cliente   20000   1ms      26512645.87   
+Cassandra    QUERY    Produtos entregues por cliente   20000   8ms      2598954.54    
+PostgreSQL   QUERY    5 produtos mais vendidos         5000    8ms      655803.33     
+MongoDB      QUERY    5 produtos mais vendidos         5000    10ms     516648.48     
+Cassandra    QUERY    5 produtos mais vendidos         5000    7ms      717963.12     
+
+=== Relatório de Performance ===
+
+Banco de Dados   Operação   Entidade   Tamanho   Duração   Registros/Segundo   
+--------------------------------------------------------------------------------
+PostgreSQL   INSERT   Cliente                                 20000   372ms    53831.37      
+PostgreSQL   INSERT   Produto                                 5000    56ms     88993.20      
+PostgreSQL   INSERT   Pedido                                  10000   267ms    37479.11      
+PostgreSQL   INSERT   Pagamento                               10000   257ms    38843.52      
+MongoDB      INSERT   Cliente                                 20000   142ms    140582.64     
+MongoDB      INSERT   Produto                                 5000    33ms     149598.84     
+MongoDB      INSERT   Pedido                                  10000   3.567s   2803.44       
+MongoDB      INSERT   Pagamento                               10000   116ms    86110.60      
+Cassandra    INSERT   Cliente                                 20000   1.131s   17676.90      
+Cassandra    INSERT   Produto                                 5000    196ms    25483.82      
+Cassandra    INSERT   Pedido                                  10000   1.149s   8701.34       
+Cassandra    INSERT   Pagamento                               10000   328ms    30476.44      
+PostgreSQL   QUERY    Cliente por email                       20000   3ms      7605774.46    
+MongoDB      QUERY    Cliente por email                       20000   7ms      2806238.49    
+Cassandra    QUERY    Cliente por email                       20000   6ms      3086038.28    
+PostgreSQL   QUERY    Produto por categoria                   5000    1ms      4729187.79    
+MongoDB      QUERY    Produto por categoria                   5000    2ms      2207848.64    
+Cassandra    QUERY    Produto por categoria                   5000    6ms      798818.13     
+PostgreSQL   QUERY    Produtos entregues por cliente          20000   1ms      18115663.07   
+MongoDB      QUERY    Produtos entregues por cliente          20000   1ms      27818346.20   
+PostgreSQL   QUERY    5 produtos mais vendidos                5000    7ms      688542.77     
+MongoDB      QUERY    5 produtos mais vendidos                5000    9ms      537638.74     
+PostgreSQL   QUERY    Pagamentos pix do último mês            10000   1ms      7933951.44    
+MongoDB      QUERY    Pagamentos pix do último mês            10000   4ms      2534073.15    
+MongoDB      QUERY    Total gasto por cliente no último mês   20000   8ms      2507505.28    
+
+=== Relatório de Performance ===
+
+Banco de Dados   Operação   Entidade   Tamanho   Duração   Registros/Segundo   
+--------------------------------------------------------------------------------
+PostgreSQL   INSERT   Cliente                                 20000   416ms    48126.91      
+PostgreSQL   INSERT   Produto                                 5000    54ms     93336.46      
+PostgreSQL   INSERT   Pedido                                  10000   277ms    36071.96      
+PostgreSQL   INSERT   Pagamento                               10000   272ms    36743.66      
+MongoDB      INSERT   Cliente                                 20000   103ms    193932.47     
+MongoDB      INSERT   Produto                                 5000    18ms     272010.76     
+MongoDB      INSERT   Pedido                                  10000   3.322s   3009.96       
+MongoDB      INSERT   Pagamento                               10000   42ms     240401.46     
+Cassandra    INSERT   Cliente                                 20000   740ms    27034.07      
+Cassandra    INSERT   Produto                                 5000    156ms    32054.58      
+Cassandra    INSERT   Pedido                                  10000   973ms    10272.66      
+Cassandra    INSERT   Pagamento                               10000   264ms    37927.41      
+PostgreSQL   QUERY    Cliente por email                       20000   2ms      8692549.31    
+MongoDB      QUERY    Cliente por email                       20000   21ms     940029.15     
+Cassandra    QUERY    Cliente por email                       20000   5ms      3959570.41    
+PostgreSQL   QUERY    Produto por categoria                   5000    1ms      5249068.29    
+MongoDB      QUERY    Produto por categoria                   5000    6ms      885164.43     
+Cassandra    QUERY    Produto por categoria                   5000    4ms      1214840.98    
+PostgreSQL   QUERY    Produtos entregues por cliente          20000   1ms      20350517.31   
+MongoDB      QUERY    Produtos entregues por cliente          20000   1ms      36200864.11   
+PostgreSQL   QUERY    5 produtos mais vendidos                5000    12ms     432407.41     
+MongoDB      QUERY    5 produtos mais vendidos                5000    15ms     323891.53     
+PostgreSQL   QUERY    Pagamentos pix do último mês            10000   1ms      6676204.74    
+MongoDB      QUERY    Pagamentos pix do último mês            10000   10ms     982825.81     
+MongoDB      QUERY    Total gasto por cliente no último mês   20000   14ms     1429274.43    
+
+=== Relatório de Performance ===
+
+Banco de Dados   Operação   Entidade   Tamanho   Duração   Registros/Segundo   
+--------------------------------------------------------------------------------
+PostgreSQL   INSERT   Cliente                                 20000   516ms    38794.63      
+PostgreSQL   INSERT   Produto                                 5000    71ms     70198.59      
+PostgreSQL   INSERT   Pedido                                  10000   2.115s   4727.53       
+PostgreSQL   INSERT   Pagamento                               10000   1.369s   7302.84       
+MongoDB      INSERT   Cliente                                 20000   648ms    30851.90      
+MongoDB      INSERT   Produto                                 5000    50ms     99426.56      
+MongoDB      INSERT   Pedido                                  10000   3.962s   2523.82       
+MongoDB      INSERT   Pagamento                               10000   629ms    15890.00      
+Cassandra    INSERT   Cliente                                 20000   1.311s   15251.56      
+Cassandra    INSERT   Produto                                 5000    264ms    18971.49      
+Cassandra    INSERT   Pagamento                               10000   356ms    28107.09      
+PostgreSQL   QUERY    Cliente por email                       20000   3ms      5994671.94    
+MongoDB      QUERY    Cliente por email                       20000   10ms     1971523.51    
+Cassandra    QUERY    Cliente por email                       20000   7ms      2926336.93    
+PostgreSQL   QUERY    Produto por categoria                   5000    1ms      5428410.13    
+MongoDB      QUERY    Produto por categoria                   5000    3ms      1898273.07    
+Cassandra    QUERY    Produto por categoria                   5000    6ms      801671.71     
+PostgreSQL   QUERY    Produtos entregues por cliente          20000   1ms      19069012.66   
+MongoDB      QUERY    Produtos entregues por cliente          20000   1ms      31492640.96   
+Cassandra    QUERY    Produtos entregues por cliente          20000   14ms     1479418.73    
+PostgreSQL   QUERY    5 produtos mais vendidos                5000    7ms      690295.39     
+MongoDB      QUERY    5 produtos mais vendidos                5000    7ms      722520.38     
+PostgreSQL   QUERY    Pagamentos pix do último mês            10000   1ms      7968629.10    
+MongoDB      QUERY    Pagamentos pix do último mês            10000   4ms      2663299.55    
+Cassandra    QUERY    Pagamentos pix do último mês            10000   8ms      1243786.51    
+MongoDB      QUERY    Total gasto por cliente no último mês   20000   7ms      2685489.80    

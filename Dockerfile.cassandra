@@ -1,0 +1,6 @@
+FROM cassandra:4.1
+
+ADD https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh /opt/bin/
+RUN chmod +x /opt/bin/wait-for-it.sh
+
+CMD /opt/bin/wait-for-it.sh --timeout=20  -- cqlsh -f ./docker-entrypoint.initdb.d/init.cql
